@@ -1,0 +1,936 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fixed Header Table Example using Bootstrap examples</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .demo_header {
+                border-top: 4px #7F00FF solid;
+                width: 100%;
+                border-bottom: 1px solid #f56993;
+                margin-bottom: 1%;
+            }
+            .demo_header_left {
+                float: left;
+                margin: 1%;
+            }
+            .demo_header_right {
+                float: right;
+                margin: 1%;
+                color: #2D9703;
+                font-size: 1em;
+                text-transform: uppercase;
+            }
+            .demo_header_right a {
+                color: #2D9703;
+                font-size: 1em;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            .demo_header_right a:hover {
+                color: #28CA04;
+                text-decoration: none;
+            }
+            #x {
+                color:#A1B9ED;
+                cursor:pointer;
+                display:none;
+            }
+            /* Set the hover state of "X" */
+            #x:hover {
+                color:#36c;
+            }
+
+            .table-fixed tbody {
+                height: 200px;
+                overflow-y: auto;
+                width: 100%;
+            }
+            .table-fixed thead,
+            .table-fixed tbody,
+            .table-fixed tr,
+            .table-fixed td,
+            .table-fixed th {
+                display: block;
+            }
+            .table-fixed tr:after {
+                content: "";
+                display: block;
+                visibility: hidden;
+                clear: both;
+            }
+            .table-fixed tbody td,
+            .table-fixed thead > tr > th {
+                float: left;
+                width: 25%;
+            }
+
+            .table > thead > tr > th,
+            .table > thead > tr > td {
+                font-size: .9em;
+                font-weight: 400;
+                border-bottom: 0;
+                letter-spacing: 1px;
+                vertical-align: top;
+                padding: 8px;
+                background: #51596a;
+                text-transform: uppercase;
+                color: #ffffff;
+                width: 25%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="demo_header">
+          HELLO TABLE
+        </div>
+        <div>
+            <div class="container">
+                <table class='table table-fixed table-condensed table-striped'>
+                    <thead>
+                        <tr>
+                            <th class="col-xs-1">#</th>
+                            <th class="col-xs-5">President</th>
+                            <th class="col-xs-3">Terms</th>
+                            <th class="col-xs-3">Tenure</th>
+                        </tr>
+                    </thead>
+                    <tbody class="nicescrolled">
+                        <tr>
+                            <td class="col-xs-1">1</td>
+                            <td class="col-xs-5">George Washington</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1789-1797</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">2</td>
+                            <td class="col-xs-5">John Adams</td>
+                            <td class="col-xs-3">one</td>
+                            <td class="col-xs-3">1797-1801</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">3</td>
+                            <td class="col-xs-5">Thomas Jefferson</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1801-1809</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">4</td>
+                            <td class="col-xs-5">James Madison</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1809-1817</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">5</td>
+                            <td class="col-xs-5">James Monroe</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1817-1825</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">6</td>
+                            <td class="col-xs-5">John Quincy Adams</td>
+                            <td class="col-xs-3">one</td>
+                            <td class="col-xs-3">1825-1829</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">7</td>
+                            <td class="col-xs-5">Andrew Jackson</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1829-1837</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">8</td>
+                            <td class="col-xs-5">Martin Van Buren</td>
+                            <td class="col-xs-3">one</td>
+                            <td class="col-xs-3">1837-1841</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">9</td>
+                            <td class="col-xs-5">William Henry Harrison</td>
+                            <td class="col-xs-3">one-partial</td>
+                            <td class="col-xs-3">1841</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">10</td>
+                            <td class="col-xs-5">John Tyler</td>
+                            <td class="col-xs-3">one-partial</td>
+                            <td class="col-xs-3">1841-1845</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">11</td>
+                            <td class="col-xs-5">James Knox Polk</td>
+                            <td class="col-xs-3">one</td>
+                            <td class="col-xs-3">1845-1849</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <b>AAAA</b>
+                
+                <table class='table table-fixed table-condensed table-striped'>
+                    <thead>
+                        <tr>
+                            <th class="col-xs-1">#</th>
+                            <th class="col-xs-5">President</th>
+                            <th class="col-xs-3">Terms</th>
+                            <th class="col-xs-3">Tenure</th>
+                        </tr>
+                        
+                        <tr class="bg-info">
+              <th rowspan="3">PYDT</t>
+              <th rowspan="3">Inventory</td>
+              <th rowspan="3">Sasaran</td>
+              <th colspan="6">EP</td>
+              <th colspan="6">EB</td>
+              <th colspan="6">EMC</td>
+              <th colspan="6">EF</td>
+              <th colspan="6">EC</td>
+              <th colspan="6">ERC</td>
+              <th colspan="6">ET</td>
+            </tr>
+                    </thead>
+                    
+                    
+                    
+                    <tbody class="nicescrolled">
+                        <tr>
+                            <td class="col-xs-1">1</td>
+                            <td class="col-xs-5">George Washington</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1789-1797</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">2</td>
+                            <td class="col-xs-5">John Adams</td>
+                            <td class="col-xs-3">one</td>
+                            <td class="col-xs-3">1797-1801</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">3</td>
+                            <td class="col-xs-5">Thomas Jefferson</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1801-1809</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">4</td>
+                            <td class="col-xs-5">James Madison</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1809-1817</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">5</td>
+                            <td class="col-xs-5">James Monroe</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1817-1825</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">6</td>
+                            <td class="col-xs-5">John Quincy Adams</td>
+                            <td class="col-xs-3">one</td>
+                            <td class="col-xs-3">1825-1829</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">7</td>
+                            <td class="col-xs-5">Andrew Jackson</td>
+                            <td class="col-xs-3">two</td>
+                            <td class="col-xs-3">1829-1837</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">8</td>
+                            <td class="col-xs-5">Martin Van Buren</td>
+                            <td class="col-xs-3">one</td>
+                            <td class="col-xs-3">1837-1841</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">9</td>
+                            <td class="col-xs-5">William Henry Harrison</td>
+                            <td class="col-xs-3">one-partial</td>
+                            <td class="col-xs-3">1841</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">10</td>
+                            <td class="col-xs-5">John Tyler</td>
+                            <td class="col-xs-3">one-partial</td>
+                            <td class="col-xs-3">1841-1845</td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-1">11</td>
+                            <td class="col-xs-5">James Knox Polk</td>
+                            <td class="col-xs-3">one</td>
+                            <td class="col-xs-3">1845-1849</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                <b>HAIRI</b>
+                <!--table table-fixed table-condensed table-striped 
+                <table class='table table-bordered table-striped table-responsive'>
+                -->
+               
+               
+                
+                
+                <div style=" height:300px;overflow-y:scroll;width: 100%;">
+                <table class='table table-bordered table-striped '>
+                   
+   <thead style="" >
+            <tr class="bg-info">
+              <td rowspan="3">PYDT</td>
+              <td rowspan="3">Inventory</td>
+              <td rowspan="3">Sasaran</td>
+              <td colspan="6" style="background-color: blue">EP</td>
+              <td colspan="6" style="background-color: black">EB</td>
+              <td colspan="6">EMC</td>
+              <td colspan="6">EF</td>
+              <td colspan="6">EC</td>
+              <td colspan="6">ERC</td>
+              <td colspan="6">ET</td>
+            </tr>
+            <tr class="bg-info">
+              <td colspan="2">Bilangan Premis</td>
+              <td colspan="2">% Perbandingan dengan Sasaran</td>
+              <td colspan="2">% Perbandingan Dengan Inventory</td>
+              
+               <td colspan="2">Bilangan Premis</td>
+              <td colspan="2">% Perbandingan dengan Sasaran</td>
+              <td colspan="2">% Perbandingan Dengan Inventory</td>
+             
+              <td colspan="2">Bilangan Premis</td>
+              <td colspan="2">% Perbandingan dengan Sasaran</td>
+              <td colspan="2">% Perbandingan Dengan Inventory</td>
+              
+              <td colspan="2">Bilangan Premis</td>
+              <td colspan="2">% Perbandingan dengan Sasaran</td>
+              <td colspan="2">% Perbandingan Dengan Inventory</td>
+              
+              <td colspan="2">Bilangan Premis</td>
+              <td colspan="2">% Perbandingan dengan Sasaran</td>
+              <td colspan="2">% Perbandingan Dengan Inventory</td>
+              
+              <td colspan="2">Bilangan Premis</td>
+              <td colspan="2">% Perbandingan dengan Sasaran</td>
+              <td colspan="2">% Perbandingan Dengan Inventory</td>
+              
+              <td colspan="2">Bilangan Premis</td>
+              <td colspan="2">% Perbandingan dengan Sasaran</td>
+              <td colspan="2">% Perbandingan Dengan Inventory</td>
+            </tr>
+            
+            <tr class="bg-info">
+              <td style="background-color: blue">Ada</td>
+              <td style="background-color: black">Tiada</td>
+              <td style="background-color: darkgoldenrod">Ada</td> 
+            <td style="background-color: darkred">Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              <td>Ada</td>
+              <td>Tiada</td>
+              
+            </tr>
+    </thead>
+    
+    <!-- <tbody class="nicescrolled"> -->
+          <tbody >
+    <tr>
+            <td>KKS</td>
+            <td data-container="body" data-toggle="tooltip" title="Inventory for KKS" >0</td>
+            <td data-container="body" data-toggle="tooltip" title="Sasaran KKS"></td>
+            <td style="background-color: blue">0</td> 
+            <td style="background-color: black">0</td> 
+            <td style="background-color: darkgoldenrod">0</td> 
+            <td style="background-color: darkred">0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            
+    </tr>
+
+            <tr>
+            <td>KG</td>
+            <td data-container="body" data-toggle="tooltip" title="Inventory for KG">0</td>
+            <td data-container="body" data-toggle="tooltip" title="Sasaran KG"></td>
+             <td style="background-color: blue">0</td> 
+            <td style="background-color: black">0</td> 
+            <td style="background-color: darkgoldenrod">0</td> 
+            <td style="background-color: darkred">0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            </tr>
+          
+
+        <tr>
+            <td>BT</td>
+            
+          <td data-container="body" data-toggle="tooltip" title="Inventory for BT">5</td>
+            <td data-container="body" data-toggle="tooltip" title="Sasaran BT">1</td>
+            <td style="background-color: blue">Ada</td>
+              <td style="background-color: black">Tiada</td>
+              <td style="background-color: darkgoldenrod">Ada</td> 
+            <td style="background-color: darkred">Tiada</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+
+        </tr>
+    <tr>
+            <td>KG</td>
+            <td data-container="body" data-toggle="tooltip" title="Inventory for KG">0</td>
+            <td data-container="body" data-toggle="tooltip" title="Sasaran KG"></td>
+             <td style="background-color: blue">Ada</td>
+              <td style="background-color: black">Tiada</td>
+              <td style="background-color: darkgoldenrod">Ada</td> 
+            <td style="background-color: darkred">Tiada</td>
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            </tr>
+          
+
+        <tr>
+            <td>BT</td>
+            
+          <td data-container="body" data-toggle="tooltip" title="Inventory for BT">5</td>
+            <td data-container="body" data-toggle="tooltip" title="Sasaran BT">1</td>
+             <td style="background-color: blue">Ada</td>
+              <td style="background-color: black">Tiada</td>
+              <td style="background-color: darkgoldenrod">Ada</td> 
+            <td style="background-color: darkred">Tiada</td>
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+
+        </tr><tr>
+            <td>KG</td>
+            <td data-container="body" data-toggle="tooltip" title="Inventory for KG">0</td>
+            <td data-container="body" data-toggle="tooltip" title="Sasaran KG"></td>
+             <td style="background-color: blue">Ada</td>
+              <td style="background-color: black">Tiada</td>
+              <td style="background-color: darkgoldenrod">Ada</td> 
+            <td style="background-color: darkred">Tiada</td>
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            </tr>
+          
+
+        <tr>
+            <td>BT</td>
+            
+          <td data-container="body" data-toggle="tooltip" title="Inventory for BT">5</td>
+            <td data-container="body" data-toggle="tooltip" title="Sasaran BT">1</td>
+             <td style="background-color: blue">Ada</td>
+              <td style="background-color: black">Tiada</td>
+              <td style="background-color: darkgoldenrod">Ada</td> 
+            <td style="background-color: darkred">Tiada</td>
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+
+        </tr><tr>
+            <td>KG</td>
+            <td data-container="body" data-toggle="tooltip" title="Inventory for KG">0</td>
+            <td data-container="body" data-toggle="tooltip" title="Sasaran KG"></td>
+            <td style="background-color: blue">Ada</td>
+              <td style="background-color: black">Tiada</td>
+              <td style="background-color: darkgoldenrod">Ada</td> 
+            <td style="background-color: darkred">Tiada</td>
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            </tr>
+          
+
+        <tr>
+            <td>BT</td>
+            
+          <td data-container="body" data-toggle="tooltip" title="Inventory for BT">5</td>
+            <td data-container="body" data-toggle="tooltip" title="Sasaran BT">1</td>
+             <td style="background-color: blue">0</td> 
+            <td style="background-color: black">0</td> 
+            <td style="background-color: darkgoldenrod">0</td> 
+            <td style="background-color: darkred">0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td> 
+            <td>0</td>
+            
+
+        </tr>
+        
+        
+     </tbody>
+</table>
+                      </div>
+
+            </div>
+            
+          
+            
+        </div>
+        
+        <div class="container">
+              <b>HHH</b>
+                <table class='table table-bordered table-striped table-responsive'>
+  <col>
+  <colgroup span="2"></colgroup>
+  <colgroup span="2"></colgroup>
+  <tr>
+    <td rowspan="2"></td>
+    <th colspan="2" scope="colgroup">Mars</th>
+    <th colspan="2" scope="colgroup">Venus</th>
+  </tr>
+  <tr>
+    <th scope="col">Produced</th>
+    <th scope="col">Sold</th>
+    <th scope="col">Produced</th>
+    <th scope="col">Sold</th>
+  </tr>
+  <tr>
+    <th scope="row">Teddy Bears</th>
+    <td>50,000</td>
+    <td>30,000</td>
+    <td>100,000</td>
+    <td>80,000</td>
+  </tr>
+  <tr>
+    <th scope="row">Board Games</th>
+    <td>10,000</td>
+    <td>5,000</td>
+    <td>12,000</td>
+    <td>9,000</td>
+  </tr>
+</table>
+        
+        </div> 
+    
+    
+    
+    </body>
+</html>
+
